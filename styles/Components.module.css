@@ -1,0 +1,165 @@
+.row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+.navBar{
+    background-image: linear-gradient(to right, #004094, #1260b1, #2a80cc, #47a1e6, #66c3ff);
+    width: 100%;
+    border: 1px solid white;
+}
+.white{
+    color: white;
+}
+.pop{
+    padding: 1px;
+    background-color: transparent;
+    border-color: transparent;
+}
+.bodyContainer{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to right, #004094, #1260b1, #2a80cc, #47a1e6, #66c3ff);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    /* border: blueviolet 2px solid; */
+}
+.bodySides{
+    z-index: 1;
+    width: 15%;
+    /* border: 2px solid red; */
+    border-radius: 5px;
+    overflow-y: scroll;
+    overflow: hidden;
+    -ms-overflow-style: none;
+}
+.bodySides::-webkit-scrollbar {
+    display: none;
+}
+
+.bodyMain{
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    border-radius: 5px;
+}
+.sliderImage{
+    z-index: 0;
+    min-width: 100%;
+    height: 100vh;
+    border-radius: 5px;
+}
+.scrollerContainer{
+    -webkit-animation: autoScrolling 15s linear infinite;
+    height: 69vh;
+}
+.scrollerContainer:hover{
+    animation: none;
+}
+.scrollerContainer .notification{
+    width: auto;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: transparent
+   }
+
+   .docWrapper{
+       width: 100%;
+       display: flex;
+       flex-direction: row;
+       align-items: center;
+       justify-content: space-around;
+   }
+   .docCard{
+       margin: 10px;
+        width: 14%;
+        min-height: 200px;
+        height: 260px;  
+        border-radius: 5px;  
+       border: rgb(245, 240, 240) 1px solid;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       transition: all ease 400ms;
+       box-shadow: 2px 2px grey;
+     
+   }
+   .docCard:hover{
+       transform: scale(1.1);
+   }
+   .docCard img{
+       border: 5px solid #fff;
+       border-radius: 5px;
+       width: 99%;
+       height: 65%;
+   }
+   .docName{
+       margin-top: 3px;
+       color: honeydew;
+       font-size: 1vw;
+       font-weight: bold;
+   }
+   .qualifications{
+       color: honeydew;
+        margin-top: 3px;
+       font-size: 0.8vw;
+       padding: 5px;
+       font-weight: bold;
+       line-height: 100%;
+   }
+   .outTeam{
+       margin-top: 2px;
+   }
+
+   .videoGallery{
+       height: 200px;
+       width: 300px;
+       border: 2px solid blue;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+   }
+
+   .photoGallery{
+    position: relative;
+    height: 200px;
+    width: 300px;
+    border: 2px solid blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    .photoGalleryImage{
+        z-index: 0;
+        min-width: 100%;
+        height: 30vh;
+        border-radius: 5px;
+
+    }
+  @-webkit-keyframes autoScrolling {
+    from {
+       transform: translateY(69vh)
+    } 
+    to{
+        transform: translateY(-40vh);
+    }
+}
+
+/* @-webkit-keyframes scrollLeft
+{
+    from {
+        transform: translateX(80vw);
+    }
+    to{
+        transform: translateX(-20vw);
+    }
+} */
